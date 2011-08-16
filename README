@@ -1,1 +1,3 @@
-First commit... Trying things out
+Android application
+Serves as an SMS gateway to send SMS from a webserver
+Web app -> DB -> SmsService -> sends sms
