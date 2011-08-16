@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res/com.zest.smsservice"
+	xmlns:android="http://schemas.android.com/apk/res/android" style="@style/MainView" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="match_parent">
+	<LinearLayout android:layout_height="wrap_content"
+		android:orientation="vertical" android:layout_width="match_parent"
+		android:id="@+id/notConnectedLayout">
+		<TextView android:layout_height="wrap_content" android:text="@string/login"
+			android:id="@+id/textView1" android:layout_width="wrap_content"
+			style="@style/MainFont"></TextView>
+		<EditText android:id="@+id/loginInput" android:inputType="textNoSuggestions"
+			android:layout_height="wrap_content" android:layout_width="match_parent"
+			style="@style/MainFont.InputBox">
+			<requestFocus></requestFocus>
+		</EditText>
+		<TextView android:layout_height="wrap_content" android:text="@string/password"
+			android:id="@+id/textView2" android:layout_width="wrap_content"
+			style="@style/MainFont"></TextView>
+		<EditText android:id="@+id/passwordInput" android:inputType="textNoSuggestions|textPassword"
+			android:layout_height="wrap_content" android:layout_width="match_parent"
+			style="@style/MainFont.InputBox"></EditText>
+		<Button android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal" android:text="@string/connect"
+			android:id="@+id/connectButton" style="@style/MainFont.Button"></Button>
+	</LinearLayout>
+	<LinearLayout android:visibility="invisible"
+		android:layout_height="wrap_content" android:orientation="vertical"
+		android:layout_width="match_parent" android:id="@+id/connectedLayout">
+		<Button android:layout_height="wrap_content" android:text="@string/stopservice"
+			android:id="@+id/stopButton" android:layout_width="match_parent"
+			style="@style/MainFont.Button"></Button>
+	</LinearLayout>
+	<ScrollView android:layout_height="fill_parent" android:layout_width="match_parent">
+		<LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+			android:id="@+id/reportLayout" style="@style/Report" android:layout_height="411dp">
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

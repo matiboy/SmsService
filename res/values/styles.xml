@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="background">#333333</color>
+	<color name="inputbackground">#eeeeee</color>
+	<color name="inputtext">#333333</color>
+	<color name="buttonbackground">#cccccc</color>
+	<color name="buttontext">#000000</color>
+	<color name="consolebackground">#000000</color>
+	<color name="text">#ffffff</color>
+	<style name="FullWidth">
+		<item name="android:layout_width">fill_parent</item>
+	</style>
+	<style name="MainFont">
+		<item name="android:textSize">14px</item>
+		<item name="android:textColor">@color/text</item>
+		<item name="android:layout_gravity">left</item>
+	</style>
+	<style name="MainView">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:background">@color/background</item>
+        <item name="android:padding">6px</item>
+    </style>
+    <style name="MainFont.InputBox">
+    	<item name="android:background">@color/inputbackground</item>
+    	<item name="android:textColor">@color/inputtext</item>
+    	<item name="android:layout_height">10dip</item>
+    	<item name="android:padding">2px</item>
+    </style>
+    <style name="MainFont.Button" parent="@android:style/Widget.Button.Small">
+    	<item name="android:layout_height">30px</item>
+    	<item name="android:layout_width">200px</item>
+    	<item name="android:textSize">14px</item>
+    </style>
+    <color name="error">#f00</color>
+    <color name="warning">#f60</color>
+    <color name="info">#009</color>
+    <style name="Report">
+        <item name="android:background">@color/consolebackground</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">2px</item>
+    </style>
+</resources>

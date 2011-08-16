@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" android:key="prefKey">
+    <PreferenceCategory android:title="@string/server" android:selectable="false" android:key="@string/PREFERENCE_catserver">
+    	<EditTextPreference android:maxLength="300" android:title="@string/serveraddress" android:summary="@string/DESC_server" android:defaultValue="http://lincoln.is-a-geek.net" android:dialogTitle="@string/DIALOG_server" android:key="@string/PREFERENCE_server">
+    	</EditTextPreference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/login" android:selectable="false" android:key="login">
+    	<EditTextPreference android:title="@string/username" android:key="username" android:defaultValue="" android:dialogTitle="@string/DIALOG_username">
+    	</EditTextPreference>
+    	<CheckBoxPreference android:key="rememberpassword" android:title="@string/rememberpassword"></CheckBoxPreference>
+    	<EditTextPreference android:defaultValue="" android:password="true" android:title="@string/password" android:dialogTitle="@string/DIALOG_password" android:key="password" android:dependency="rememberpassword">
+    	</EditTextPreference>
+    	
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/service" android:key="service">
+        <EditTextPreference android:key="frequency" android:dialogTitle="@string/checkfrequency" android:summary="@string/DESC_checkfrequency" android:title="@string/checkfrequency" android:inputType="number"></EditTextPreference>
+        <CheckBoxPreference android:summaryOff="@string/DESC_changecheckfrequencyonmaximumsms_off" android:title="@string/changecheckfrequencyonmaximumsms" android:key="changecheckfrequencyonmaximumsms" android:summaryOn="@string/DESC_changecheckfrequencyonmaximumsms_on"></CheckBoxPreference>
+        <EditTextPreference android:key="checkfrequencyonmaximumsms" android:dialogTitle="@string/checkfrequencyonmaximumsms" android:summary="@string/DESC_checkfrequencyonmaximumsms" android:title="@string/checkfrequencyonmaximumsms" android:dependency="changecheckfrequencyonmaximumsms" android:inputType="number"></EditTextPreference>
+        <CheckBoxPreference android:title="@string/checkonnetwork" android:key="checkonnetwork" android:summary="@string/DESC_checkonnetwork"></CheckBoxPreference>
+        <EditTextPreference android:key="maximumsms" android:inputType="number" android:dialogTitle="@string/maximumsms" android:defaultValue="20" android:summary="@string/DESC_maximumsms" android:title="@string/maximumsms"></EditTextPreference>
+        <CheckBoxPreference android:summaryOff="@string/DESC_usesendwaves_off" android:selectable="true" android:title="@string/usesendwaves" android:key="usesendwaves" android:summaryOn="@string/DESC_usesendwaves_on"></CheckBoxPreference>
+        <EditTextPreference android:key="waves" android:dialogTitle="@string/waves" android:defaultValue="@string/DEFAULT_waves" android:summary="@string/DESC_sendwaves" android:title="@string/waves" android:dependency="usesendwaves" android:dialogMessage="@string/DESC_sendwaves"></EditTextPreference>
+    </PreferenceCategory>
+</PreferenceScreen>
